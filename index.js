@@ -123,5 +123,6 @@ const uniqueSkils = allSkils.reduce((allSkils, currentSkill) => {
     }
     return allSkils;
 }, []);
-console.log(uniqueSkils);
+const sortedUniqueSkills = [...uniqueSkils].sort((a, b) => a - b)
+console.log(sortedUniqueSkills);
 
