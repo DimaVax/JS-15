@@ -92,25 +92,24 @@ const arrayOfUsers = [
 ];
 
 // 1
-// const sumOfBallance = arrayOfUsers.reduce((acc, value) => acc + value.balance, 0);
-// console.log(`Сума балансу всіх користувачів це ${sumOfBallance}₴.`);
+const sumOfBallance = arrayOfUsers.reduce((acc, value) => acc + value.balance, 0);
+console.log(`Сума балансу всіх користувачів це ${sumOfBallance}₴.`);
 
 // 2
-// const usersWithFriendVlad = arrayOfUsers.reduce((acc, person) => {
+const usersWithFriendVlad = arrayOfUsers.reduce((acc, person) => {
 
-//     if (person.friends.includes('Vlad')) {
-//       acc.push(person.name);
-//     }
-//     return acc;
-//   }, []);
+    if (person.friends.includes('Vlad')) {
+      acc.push(person.name);
+    }
+    return acc;
+  }, []);
   
-//   console.log(usersWithFriendVlad);
-// console.log(usersWithThisFriend);
+  console.log(usersWithFriendVlad);
 
 // 3
-// const sortUsersByFriends = (a, b) => b.friends.length - a.friends.length;
-// const arrayOfUsersCopy = [...arrayOfUsers];
-// console.log(arrayOfUsersCopy.sort(sortUsersByFriends))
+const sortUsersByFriends = (a, b) => b.friends.length - a.friends.length;
+const arrayOfUsersCopy = [...arrayOfUsers];
+console.log(arrayOfUsersCopy.sort(sortUsersByFriends))
 
 // 4
 const allSkils = arrayOfUsers.reduce((allSkils, currentUser) => {
